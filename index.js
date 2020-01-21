@@ -46,6 +46,7 @@ function caesarCipherCharCode(string, key) {
       newString += ' ';
       return;
     }
+    if (key < 0) key = 26 + key;
     let char = String.fromCharCode((c.charCodeAt(0) + key - 97 ) % 26 + 97);
 
     if (string[i] === c.toUpperCase()) newString += char.toUpperCase();
